@@ -133,7 +133,7 @@ public class AddressBook {
     private static final String COMMAND_EXIT_DESC = "Exits the program.";
     private static final String COMMAND_EXIT_EXAMPLE = COMMAND_EXIT_WORD;
 
-    private static final String COMMAND_ADD_AND_LIST_WORD = "add and list";
+    private static final String COMMAND_ADD_AND_LIST_WORD = "add_and_list";
     private static final String COMMAND_ADD_AND_LIST_DESC = "Adds a person to the address book, and lists out the updated address book.";
     private static final String COMMAND_ADD_AND_LIST_PARAMETERS = "NAME "
                                                       + PERSON_DATA_PREFIX_PHONE + "PHONE_NUMBER "
