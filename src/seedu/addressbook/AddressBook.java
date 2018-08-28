@@ -133,7 +133,14 @@ public class AddressBook {
     private static final String COMMAND_EXIT_DESC = "Exits the program.";
     private static final String COMMAND_EXIT_EXAMPLE = COMMAND_EXIT_WORD;
 
-    private static final String DIVIDER = "===================================================";
+    private static final String COMMAND_ADD_AND_LIST_WORD = "add and list";
+    private static final String COMMAND_ADD_AND_LIST_DESC = "Adds a person to the address book, and lists out the updated address book.";
+    private static final String COMMAND_ADD_AND_LIST_PARAMETERS = "NAME "
+                                                      + PERSON_DATA_PREFIX_PHONE + "PHONE_NUMBER "
+                                                      + PERSON_DATA_PREFIX_EMAIL + "EMAIL";
+    private static final String COMMAND_ADD_AND_LIST_EXAMPLE = COMMAND_ADD_AND_LIST_WORD + " John Doe p/98765432 e/johnd@gmail.com";
+
+   private static final String DIVIDER = "===================================================";
 
 
     /* We use a String array to store details of a single person.
@@ -383,6 +390,9 @@ public class AddressBook {
             return getUsageInfoForAllCommands();
         case COMMAND_EXIT_WORD:
             executeExitProgramRequest();
+        case COMMAND_ADD_AND_LIST_WORD:
+            executeAddPerson(commandArgs);
+            return executeListAllPersonsInAddressBook();
         default:
             return getMessageForInvalidCommandInput(commandType, getUsageInfoForAllCommands());
         }
@@ -412,7 +422,8 @@ public class AddressBook {
      * Adds a person (specified by the command args) to the address book.
      * The entire command arguments string is treated as a string representation of the person to add.
      *
-     * @param commandArgs full command args string from the user
+     * @param c
+     return executeListAllPersonsInAddressBook();ommandArgs full command args string from the user
      * @return feedback display message for the operation result
      */
     private static String executeAddPerson(String commandArgs) {
