@@ -41,6 +41,9 @@
   add Esther Potato p/555555 e/esther@notreal.potato
   list
 
+  # test add and list combined command
+  add_and_list Ayush Chattoraj e/ayush.c@nus.edu.sg p/888888
+
 ##########################################################
 # test find persons command
 ##########################################################
